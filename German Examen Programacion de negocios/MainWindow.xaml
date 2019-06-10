@@ -5,8 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:German_Examen_Programacion_de_negocios"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="900">
     <Grid>
-        
+        <StackPanel Background="LightGreen" Margin="0,0,0,-23">
+            <Label Content="CALCULO DE IHSS DE LOS EMPLEADOS" HorizontalAlignment="Center" Margin="10" FontFamily="Arial" FontSize="15"/>
+            <Grid Height="380" Width="800" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Height="390" Grid.ColumnSpan="2" Margin="0,0,0,-10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+
+                    </Grid.RowDefinitions>
+                    <Label Content="Resultado sin deducciones" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="10"/>
+                    <Label Content="Identidad" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" FontSize="20"/>
+                    <Label Content="Nombre" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" FontSize="20"/>
+                    <Label Content="Identidad" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" FontSize="20"/>
+                    <Label Content="Horas trabajadas" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" FontSize="15"/>
+                    <Label Content="pago por hora de trabajo extra" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" FontSize="10" Margin="20,36,19,2" Grid.RowSpan="2"/>
+                    <!-- TEXTBOXT PARA EL INGRESO DE CORDENADAS-->
+                    <TextBox Width="50" Height="20"  Grid.Column="1" Grid.Row="1" Text="{Binding Path=NombreEmpleado, Mode=TwoWay}"/>
+                    <TextBox Width="50" Height="20"  Grid.Column="2" Grid.Row="1" Text="{Binding Path=Identidad, Mode=TwoWay}"/>
+                    <TextBox Width="50" Height="20"  Grid.Column="1" Grid.Row="2" Text="{Binding Path=Horastrabajadas, Mode=TwoWay}"/>
+                    <TextBox Width="50" Height="20"  Grid.Column="2" Grid.Row="2" Text="{Binding Path=pagoporhoranormaldeltrabajo, Mode=TwoWay}"/>
+                    <TextBox Width="50" Height="20" Grid.Column="1" Grid.Row="3" Text="{Binding Path=horasextrastrabajadas, Mode=TwoWay}"/>
+                    <TextBox Width="50" Height="20" Grid.Column="2" Grid.Row="3" Text="{Binding Path=horastrabajadas, Mode=TwoWay}"/>
+                    <TextBox Width="50" Height="20" Grid.Column="1" Grid.Row="4" Text="{Binding Path=pagosportrabajosdehorasextra, Mode=TwoWay}"/>
+                    <TextBox Width="50" Height="20"  Grid.Column="2" Grid.Row="4" Text="{Binding Path=pagosportrabajosdehorasextra, Mode=TwoWay}"/>
+                    <!-- TEXTBOXT PARA MOSTRAR LOS RESULTADOS-->
+                    <Label Content="Sueldo sin deducciones" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" FontSize="20"/>
+                    <TextBox  Name="WidthR" Width="100" Height="20" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic"
+                      Text="{Binding Path=BaseRectangulo, Mode=TwoWay}"/>
+                    <Label Content="Sueldo por Horas extra" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" FontSize="20" />
+                    <TextBox Name="German"  Width="100" Height="20" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic"
+                      Text="{Binding Path=AlturaRectangulo, Mode=TwoWay}"/>
+                    <Label Content="Deducciones que se realizan al empleado" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Center" FontSize="20"/>
+                    <TextBox Width="100" Height="20" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic"
+                     Text="{Binding Path=Perimetro, Mode=TwoWay}"/>
+                    <Label Content="Sueldo total del empleado" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" FontSize="20"/>
+                    <TextBox Width="100" Height="20" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic"
+                     Text="{Binding Path=Area, Mode=TwoWay}"/>
+                </Grid>
+            </Grid>
+
+        </StackPanel>
     </Grid>
 </Window>
+
+
+    
